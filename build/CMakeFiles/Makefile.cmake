@@ -181,4 +181,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "my_robot_tutorials/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "my_robot_tutorials/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "my_robot_tutorials/CMakeFiles/node_cpp.dir/DependInfo.cmake"
+  "my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/DependInfo.cmake"
+  "my_robot_tutorials/CMakeFiles/smartphone_node.dir/DependInfo.cmake"
   )

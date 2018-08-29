@@ -66,16 +66,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -87,6 +88,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -120,18 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -405,6 +405,36 @@ node_cpp/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/node_cpp.dir/build.make my_robot_tutorials/CMakeFiles/node_cpp.dir/build
 .PHONY : node_cpp/fast
 
+# Convenience name for target.
+my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/rule
+.PHONY : my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/rule
+
+# Convenience name for target.
+robot_news_radio_transmitter: my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/rule
+
+.PHONY : robot_news_radio_transmitter
+
+# fast build rule for target.
+robot_news_radio_transmitter/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build.make my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build
+.PHONY : robot_news_radio_transmitter/fast
+
+# Convenience name for target.
+my_robot_tutorials/CMakeFiles/smartphone_node.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_tutorials/CMakeFiles/smartphone_node.dir/rule
+.PHONY : my_robot_tutorials/CMakeFiles/smartphone_node.dir/rule
+
+# Convenience name for target.
+smartphone_node: my_robot_tutorials/CMakeFiles/smartphone_node.dir/rule
+
+.PHONY : smartphone_node
+
+# fast build rule for target.
+smartphone_node/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/smartphone_node.dir/build.make my_robot_tutorials/CMakeFiles/smartphone_node.dir/build
+.PHONY : smartphone_node/fast
+
 src/my_first_node.o: src/my_first_node.cpp.o
 
 .PHONY : src/my_first_node.o
@@ -432,6 +462,60 @@ src/my_first_node.cpp.s:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/node_cpp.dir/build.make my_robot_tutorials/CMakeFiles/node_cpp.dir/src/my_first_node.cpp.s
 .PHONY : src/my_first_node.cpp.s
 
+src/robot_news_radio_transmitter.o: src/robot_news_radio_transmitter.cpp.o
+
+.PHONY : src/robot_news_radio_transmitter.o
+
+# target to build an object file
+src/robot_news_radio_transmitter.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build.make my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/src/robot_news_radio_transmitter.cpp.o
+.PHONY : src/robot_news_radio_transmitter.cpp.o
+
+src/robot_news_radio_transmitter.i: src/robot_news_radio_transmitter.cpp.i
+
+.PHONY : src/robot_news_radio_transmitter.i
+
+# target to preprocess a source file
+src/robot_news_radio_transmitter.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build.make my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/src/robot_news_radio_transmitter.cpp.i
+.PHONY : src/robot_news_radio_transmitter.cpp.i
+
+src/robot_news_radio_transmitter.s: src/robot_news_radio_transmitter.cpp.s
+
+.PHONY : src/robot_news_radio_transmitter.s
+
+# target to generate assembly for a file
+src/robot_news_radio_transmitter.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build.make my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/src/robot_news_radio_transmitter.cpp.s
+.PHONY : src/robot_news_radio_transmitter.cpp.s
+
+src/smartphone_node.o: src/smartphone_node.cpp.o
+
+.PHONY : src/smartphone_node.o
+
+# target to build an object file
+src/smartphone_node.cpp.o:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/smartphone_node.dir/build.make my_robot_tutorials/CMakeFiles/smartphone_node.dir/src/smartphone_node.cpp.o
+.PHONY : src/smartphone_node.cpp.o
+
+src/smartphone_node.i: src/smartphone_node.cpp.i
+
+.PHONY : src/smartphone_node.i
+
+# target to preprocess a source file
+src/smartphone_node.cpp.i:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/smartphone_node.dir/build.make my_robot_tutorials/CMakeFiles/smartphone_node.dir/src/smartphone_node.cpp.i
+.PHONY : src/smartphone_node.cpp.i
+
+src/smartphone_node.s: src/smartphone_node.cpp.s
+
+.PHONY : src/smartphone_node.s
+
+# target to generate assembly for a file
+src/smartphone_node.cpp.s:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_tutorials/CMakeFiles/smartphone_node.dir/build.make my_robot_tutorials/CMakeFiles/smartphone_node.dir/src/smartphone_node.cpp.s
+.PHONY : src/smartphone_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -439,12 +523,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... rebuild_cache"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... edit_cache"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_cpp"
@@ -458,12 +543,19 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... node_cpp"
+	@echo "... robot_news_radio_transmitter"
+	@echo "... smartphone_node"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... install"
 	@echo "... src/my_first_node.o"
 	@echo "... src/my_first_node.i"
 	@echo "... src/my_first_node.s"
+	@echo "... src/robot_news_radio_transmitter.o"
+	@echo "... src/robot_news_radio_transmitter.i"
+	@echo "... src/robot_news_radio_transmitter.s"
+	@echo "... src/smartphone_node.o"
+	@echo "... src/smartphone_node.i"
+	@echo "... src/smartphone_node.s"
 .PHONY : help
 
 

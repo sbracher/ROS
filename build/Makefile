@@ -490,6 +490,32 @@ node_cpp/fast:
 	$(MAKE) -f my_robot_tutorials/CMakeFiles/node_cpp.dir/build.make my_robot_tutorials/CMakeFiles/node_cpp.dir/build
 .PHONY : node_cpp/fast
 
+#=============================================================================
+# Target rules for targets named robot_news_radio_transmitter
+
+# Build rule for target.
+robot_news_radio_transmitter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_news_radio_transmitter
+.PHONY : robot_news_radio_transmitter
+
+# fast build rule for target.
+robot_news_radio_transmitter/fast:
+	$(MAKE) -f my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build.make my_robot_tutorials/CMakeFiles/robot_news_radio_transmitter.dir/build
+.PHONY : robot_news_radio_transmitter/fast
+
+#=============================================================================
+# Target rules for targets named smartphone_node
+
+# Build rule for target.
+smartphone_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 smartphone_node
+.PHONY : smartphone_node
+
+# fast build rule for target.
+smartphone_node/fast:
+	$(MAKE) -f my_robot_tutorials/CMakeFiles/smartphone_node.dir/build.make my_robot_tutorials/CMakeFiles/smartphone_node.dir/build
+.PHONY : smartphone_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -528,6 +554,8 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... node_cpp"
+	@echo "... robot_news_radio_transmitter"
+	@echo "... smartphone_node"
 .PHONY : help
 
 
