@@ -153,6 +153,10 @@ target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 
+add_executable(oop_number_counter src/oop_number_counter.cpp)
+target_link_libraries(oop_number_counter ${catkin_LIBRARIES})
+
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
