@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "my_robot_msgs: 1 messages, 0 services")
+message(STATUS "my_robot_msgs: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -16,6 +16,11 @@ add_custom_target(my_robot_msgs_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_custom_target(_my_robot_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "my_robot_msgs" "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" ""
+)
 
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_custom_target(_my_robot_msgs_generate_messages_check_deps_${_filename}
@@ -36,6 +41,12 @@ _generate_msg_cpp(my_robot_msgs
 )
 
 ### Generating Services
+_generate_srv_cpp(my_robot_msgs
+  "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/my_robot_msgs
+)
 
 ### Generating Module File
 _generate_module_cpp(my_robot_msgs
@@ -49,6 +60,8 @@ add_custom_target(my_robot_msgs_generate_messages_cpp
 add_dependencies(my_robot_msgs_generate_messages my_robot_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_dependencies(my_robot_msgs_generate_messages_cpp _my_robot_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_dependencies(my_robot_msgs_generate_messages_cpp _my_robot_msgs_generate_messages_check_deps_${_filename})
 
@@ -69,6 +82,12 @@ _generate_msg_eus(my_robot_msgs
 )
 
 ### Generating Services
+_generate_srv_eus(my_robot_msgs
+  "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/my_robot_msgs
+)
 
 ### Generating Module File
 _generate_module_eus(my_robot_msgs
@@ -82,6 +101,8 @@ add_custom_target(my_robot_msgs_generate_messages_eus
 add_dependencies(my_robot_msgs_generate_messages my_robot_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_dependencies(my_robot_msgs_generate_messages_eus _my_robot_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_dependencies(my_robot_msgs_generate_messages_eus _my_robot_msgs_generate_messages_check_deps_${_filename})
 
@@ -102,6 +123,12 @@ _generate_msg_lisp(my_robot_msgs
 )
 
 ### Generating Services
+_generate_srv_lisp(my_robot_msgs
+  "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/my_robot_msgs
+)
 
 ### Generating Module File
 _generate_module_lisp(my_robot_msgs
@@ -115,6 +142,8 @@ add_custom_target(my_robot_msgs_generate_messages_lisp
 add_dependencies(my_robot_msgs_generate_messages my_robot_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_dependencies(my_robot_msgs_generate_messages_lisp _my_robot_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_dependencies(my_robot_msgs_generate_messages_lisp _my_robot_msgs_generate_messages_check_deps_${_filename})
 
@@ -135,6 +164,12 @@ _generate_msg_nodejs(my_robot_msgs
 )
 
 ### Generating Services
+_generate_srv_nodejs(my_robot_msgs
+  "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/my_robot_msgs
+)
 
 ### Generating Module File
 _generate_module_nodejs(my_robot_msgs
@@ -148,6 +183,8 @@ add_custom_target(my_robot_msgs_generate_messages_nodejs
 add_dependencies(my_robot_msgs_generate_messages my_robot_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_dependencies(my_robot_msgs_generate_messages_nodejs _my_robot_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_dependencies(my_robot_msgs_generate_messages_nodejs _my_robot_msgs_generate_messages_check_deps_${_filename})
 
@@ -168,6 +205,12 @@ _generate_msg_py(my_robot_msgs
 )
 
 ### Generating Services
+_generate_srv_py(my_robot_msgs
+  "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/my_robot_msgs
+)
 
 ### Generating Module File
 _generate_module_py(my_robot_msgs
@@ -181,6 +224,8 @@ add_custom_target(my_robot_msgs_generate_messages_py
 add_dependencies(my_robot_msgs_generate_messages my_robot_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv" NAME_WE)
+add_dependencies(my_robot_msgs_generate_messages_py _my_robot_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg" NAME_WE)
 add_dependencies(my_robot_msgs_generate_messages_py _my_robot_msgs_generate_messages_check_deps_${_filename})
 

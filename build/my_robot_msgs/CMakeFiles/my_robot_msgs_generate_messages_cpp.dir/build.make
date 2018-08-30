@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ros/catkin_ws/build
 include my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp.dir/progress.make
 
 my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp: /home/ros/catkin_ws/devel/include/my_robot_msgs/HardwareStatus.h
+my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp: /home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h
 
 
 /home/ros/catkin_ws/devel/include/my_robot_msgs/HardwareStatus.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
@@ -62,8 +63,16 @@ my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp: /home/ros/catkin_w
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from my_robot_msgs/HardwareStatus.msg"
 	cd /home/ros/catkin_ws/src/my_robot_msgs && /home/ros/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg -Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p my_robot_msgs -o /home/ros/catkin_ws/devel/include/my_robot_msgs -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h: /home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv
+/home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from my_robot_msgs/ComputeDiskArea.srv"
+	cd /home/ros/catkin_ws/src/my_robot_msgs && /home/ros/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv -Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p my_robot_msgs -o /home/ros/catkin_ws/devel/include/my_robot_msgs -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 my_robot_msgs_generate_messages_cpp: my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp
 my_robot_msgs_generate_messages_cpp: /home/ros/catkin_ws/devel/include/my_robot_msgs/HardwareStatus.h
+my_robot_msgs_generate_messages_cpp: /home/ros/catkin_ws/devel/include/my_robot_msgs/ComputeDiskArea.h
 my_robot_msgs_generate_messages_cpp: my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_cpp.dir/build.make
 
 .PHONY : my_robot_msgs_generate_messages_cpp
