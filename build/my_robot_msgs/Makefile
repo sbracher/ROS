@@ -110,6 +110,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -121,17 +132,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -239,6 +239,21 @@ my_robot_msgs_generate_messages_lisp: my_robot_msgs/CMakeFiles/my_robot_msgs_gen
 my_robot_msgs_generate_messages_lisp/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_lisp.dir/build.make my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_lisp.dir/build
 .PHONY : my_robot_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
+.PHONY : my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
+
+# Convenience name for target.
+my_robot_msgs_geneus: my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
+
+.PHONY : my_robot_msgs_geneus
+
+# fast build rule for target.
+my_robot_msgs_geneus/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build.make my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build
+.PHONY : my_robot_msgs_geneus/fast
 
 # Convenience name for target.
 my_robot_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -541,6 +556,21 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/rule:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/rule
+.PHONY : my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/rule
+
+# Convenience name for target.
+_my_robot_msgs_generate_messages_check_deps_SetLed: my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/rule
+
+.PHONY : _my_robot_msgs_generate_messages_check_deps_SetLed
+
+# fast build rule for target.
+_my_robot_msgs_generate_messages_check_deps_SetLed/fast:
+	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/build.make my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/build
+.PHONY : _my_robot_msgs_generate_messages_check_deps_SetLed/fast
+
+# Convenience name for target.
 my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages.dir/rule:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages.dir/rule
 .PHONY : my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages.dir/rule
@@ -570,21 +600,6 @@ _my_robot_msgs_generate_messages_check_deps_HardwareStatus/fast:
 	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_HardwareStatus.dir/build.make my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_HardwareStatus.dir/build
 .PHONY : _my_robot_msgs_generate_messages_check_deps_HardwareStatus/fast
 
-# Convenience name for target.
-my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
-.PHONY : my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
-
-# Convenience name for target.
-my_robot_msgs_geneus: my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/rule
-
-.PHONY : my_robot_msgs_geneus
-
-# fast build rule for target.
-my_robot_msgs_geneus/fast:
-	cd /home/ros/catkin_ws/build && $(MAKE) -f my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build.make my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build
-.PHONY : my_robot_msgs_geneus/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -601,6 +616,8 @@ help:
 	@echo "... my_robot_msgs_genlisp"
 	@echo "... list_install_components"
 	@echo "... my_robot_msgs_generate_messages_lisp"
+	@echo "... install/strip"
+	@echo "... my_robot_msgs_geneus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _my_robot_msgs_generate_messages_check_deps_ComputeDiskArea"
 	@echo "... roscpp_generate_messages_py"
@@ -622,10 +639,9 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... _my_robot_msgs_generate_messages_check_deps_SetLed"
 	@echo "... my_robot_msgs_generate_messages"
 	@echo "... _my_robot_msgs_generate_messages_check_deps_HardwareStatus"
-	@echo "... install/strip"
-	@echo "... my_robot_msgs_geneus"
 .PHONY : help
 
 

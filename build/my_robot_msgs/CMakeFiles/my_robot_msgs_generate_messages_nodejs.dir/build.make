@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ros/catkin_ws/build
 include my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs.dir/progress.make
 
 my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/msg/HardwareStatus.js
+my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/SetLed.js
 my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/ComputeDiskArea.js
 
 
@@ -62,13 +63,19 @@ my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs: /home/ros/catki
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from my_robot_msgs/HardwareStatus.msg"
 	cd /home/ros/catkin_ws/build/my_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ros/catkin_ws/src/my_robot_msgs/msg/HardwareStatus.msg -Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p my_robot_msgs -o /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/msg
 
+/home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/SetLed.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/SetLed.js: /home/ros/catkin_ws/src/my_robot_msgs/srv/SetLed.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from my_robot_msgs/SetLed.srv"
+	cd /home/ros/catkin_ws/build/my_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ros/catkin_ws/src/my_robot_msgs/srv/SetLed.srv -Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p my_robot_msgs -o /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv
+
 /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/ComputeDiskArea.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/ComputeDiskArea.js: /home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from my_robot_msgs/ComputeDiskArea.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ros/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from my_robot_msgs/ComputeDiskArea.srv"
 	cd /home/ros/catkin_ws/build/my_robot_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ros/catkin_ws/src/my_robot_msgs/srv/ComputeDiskArea.srv -Imy_robot_msgs:/home/ros/catkin_ws/src/my_robot_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p my_robot_msgs -o /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv
 
 my_robot_msgs_generate_messages_nodejs: my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs
 my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/msg/HardwareStatus.js
+my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/SetLed.js
 my_robot_msgs_generate_messages_nodejs: /home/ros/catkin_ws/devel/share/gennodejs/ros/my_robot_msgs/srv/ComputeDiskArea.js
 my_robot_msgs_generate_messages_nodejs: my_robot_msgs/CMakeFiles/my_robot_msgs_generate_messages_nodejs.dir/build.make
 

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_robot_msgs_generate_messages_py"
   "/home/ros/catkin_ws/devel/lib/python2.7/dist-packages/my_robot_msgs/msg/_HardwareStatus.py"
+  "/home/ros/catkin_ws/devel/lib/python2.7/dist-packages/my_robot_msgs/srv/_SetLed.py"
   "/home/ros/catkin_ws/devel/lib/python2.7/dist-packages/my_robot_msgs/srv/_ComputeDiskArea.py"
   "/home/ros/catkin_ws/devel/lib/python2.7/dist-packages/my_robot_msgs/msg/__init__.py"
   "/home/ros/catkin_ws/devel/lib/python2.7/dist-packages/my_robot_msgs/srv/__init__.py"

@@ -348,6 +348,19 @@ my_robot_msgs_generate_messages_lisp/fast:
 .PHONY : my_robot_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named my_robot_msgs_geneus
+
+# Build rule for target.
+my_robot_msgs_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs_geneus
+.PHONY : my_robot_msgs_geneus
+
+# fast build rule for target.
+my_robot_msgs_geneus/fast:
+	$(MAKE) -f my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build.make my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build
+.PHONY : my_robot_msgs_geneus/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_py
 
 # Build rule for target.
@@ -608,6 +621,19 @@ std_msgs_generate_messages_lisp/fast:
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named _my_robot_msgs_generate_messages_check_deps_SetLed
+
+# Build rule for target.
+_my_robot_msgs_generate_messages_check_deps_SetLed: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _my_robot_msgs_generate_messages_check_deps_SetLed
+.PHONY : _my_robot_msgs_generate_messages_check_deps_SetLed
+
+# fast build rule for target.
+_my_robot_msgs_generate_messages_check_deps_SetLed/fast:
+	$(MAKE) -f my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/build.make my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_SetLed.dir/build
+.PHONY : _my_robot_msgs_generate_messages_check_deps_SetLed/fast
+
+#=============================================================================
 # Target rules for targets named my_robot_msgs_generate_messages
 
 # Build rule for target.
@@ -632,19 +658,6 @@ _my_robot_msgs_generate_messages_check_deps_HardwareStatus: cmake_check_build_sy
 _my_robot_msgs_generate_messages_check_deps_HardwareStatus/fast:
 	$(MAKE) -f my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_HardwareStatus.dir/build.make my_robot_msgs/CMakeFiles/_my_robot_msgs_generate_messages_check_deps_HardwareStatus.dir/build
 .PHONY : _my_robot_msgs_generate_messages_check_deps_HardwareStatus/fast
-
-#=============================================================================
-# Target rules for targets named my_robot_msgs_geneus
-
-# Build rule for target.
-my_robot_msgs_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 my_robot_msgs_geneus
-.PHONY : my_robot_msgs_geneus
-
-# fast build rule for target.
-my_robot_msgs_geneus/fast:
-	$(MAKE) -f my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build.make my_robot_msgs/CMakeFiles/my_robot_msgs_geneus.dir/build
-.PHONY : my_robot_msgs_geneus/fast
 
 #=============================================================================
 # Target rules for targets named add_two_ints_server
@@ -868,6 +881,7 @@ help:
 	@echo "... my_robot_msgs_gennodejs"
 	@echo "... my_robot_msgs_genlisp"
 	@echo "... my_robot_msgs_generate_messages_lisp"
+	@echo "... my_robot_msgs_geneus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _my_robot_msgs_generate_messages_check_deps_ComputeDiskArea"
 	@echo "... roscpp_generate_messages_py"
@@ -888,9 +902,9 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... _my_robot_msgs_generate_messages_check_deps_SetLed"
 	@echo "... my_robot_msgs_generate_messages"
 	@echo "... _my_robot_msgs_generate_messages_check_deps_HardwareStatus"
-	@echo "... my_robot_msgs_geneus"
 	@echo "... add_two_ints_server"
 	@echo "... smartphone_node"
 	@echo "... robot_news_radio_transmitter"
